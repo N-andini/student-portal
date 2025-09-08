@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("school.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* center vertically */
+}
+
+.container1 {
+    border: 1px solid rgb(255, 255, 255);
+    width: 64vh;
+    height: auto;
+    text-align: center;
+    padding: 40px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 40px #d05f27e1;
+    transition: all 0.8s;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.container2 input {
+   width: 40vh;
+   padding: 10px;
+   font-size: 16px;
+   border: none;
+   border-bottom: 2px solid white;
+   background: transparent;
+   color: black;
+   outline: none;
+}
+
+.container2 p {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 40px;
+    font-size: 14px;
+}
+
+.container3 h3 {
+    font-size: 14px;
+    color: #333;
+}
+
+.container3 a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+.container3 a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+.container4 button {
+    width: 100%;
+    height: 45px;
+    background-color:#ff00995e;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-top: 15px;
+}
+
+button:hover {
+   cursor: pointer;
+   box-shadow: 0 0 20px #da5454;
+   transition: all 0.3s;
+   background-color: rgba(255, 30, 0, 0.6);
+}
+
+.container4 a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.container4 a:hover {
+    text-decoration: underline;
+}
+
+/* Error message */
+.message {
+    color: red;
+    display: none;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .container1 {
+        width: 90%;
+    }
+    .container2 input {
+        width: 100%;
+        font-size: 14px;
+    }
+}

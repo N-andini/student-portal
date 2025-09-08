@@ -1,0 +1,36 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.time h1{
+    margin-top: 70px;
+
+}
+.time-table{
+    margin-top: 30px;
+    border-radius: 30px;
+    width: 63%;
+    text-align: center;
+    margin-left: 25%;
+}
+.time-table table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 30px;
+    margin-left: 20px;
+    width: 20%;
+}
+.time-table th ,td{
+    border: 1px solid black;
+    padding: 50px;
+}
+.time-table th{
+    background: red;
+    padding-left: 20px;
+}
+.time-table table:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+    transition: all 0.8px;
+}
