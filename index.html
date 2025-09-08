@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dasboard</title>
-        <link rel="stylesheet" href="index.css">
+        <title>student login</title>
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
-        <!-- header  -->
-         <!-- Top Bar -->
         <div class="container1">
-        <div class="side-bar">
-            <h2></h2>
-            <div class="my-profile">
-                                <h4>Nandini</h4>
+            <div class="container2">
+                <h1>LOGIN</h1>
+               <p>*Student ID / Email*</p>
+        <input  id="username" placeholder="Enter Student ID / Email" required>
+        <br>
 
-                <img src="profile.jpg"alt="My Profile picture" class="profile">
-       <button onclick="button()" class="btn">Log-Out</button>           
- </div>
-        </div>
-        </div>
-        <!-- Side Bar -->
-           <div class="menu">
-    <h1> Dashboard</h1>
-                <a href="acsdemic.html">🗂️Academic Overview</a>
-                <a href="class shedule.html">📆Class Schedule</a>
-                <a href="notification.html">📥Notifications</a>
-                <a href="course.html">Course Material</a>
-                <a href="#">Exam Timetable</a>
-                
-                
-            
+        <p>*Password*</p>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <p  class="message" id="msg"> Please fill the form</p>
+        
+            </div>
+            <div class="container3">
+                <h3>Remember me</h3>
+                 <a href="forgotpassword.html">Forgot Password?</a>
+            </div>
+            <div class="container4">
+                <button  onclick="login()">Login</button><br>
+                <a href="register.html"> register</a>
             </div>
 
-                    <!-- Welcome -->
-            <div class="welcome-profile">
-    <img src="profile.jpg" alt="Profile Picture">
-    <div class="text-content">
-        <h1>Hello, Nandini! 👋</h1>
-        <p>Welcome, Nandini Babu!</h1>
-                <p>Here's Your Dashboard Overview</p>
-    </div>
-</div>
+        </div>
+        <script>
+            function login(){
+                let user=document.getElementById("username").value.trim();
+                let pass=document.getElementById("password").value.trim();
+                let msg=document.getElementById("msg");
+                if(user===""|| pass===""){
+                    msg.style.display="block";
 
-
-
-                </div>
-    </body>
-    <script>
-                function button(){
-alert("do you want logout");
-window.location.href="login.html"
                 }
-            </script>
+                else{
+                    msg.style.display="none";
+                    alert("Login Successful");
+                    window.location.href="index.html";
+                }
+
+            }
+        </script>
+        
+    </body>
 </html>
