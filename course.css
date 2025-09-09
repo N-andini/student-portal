@@ -1,0 +1,115 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      margin: 0;
+    }
+.course{
+    margin: 6% 20%;
+    border-radius: 19px ;
+    text-align: center;
+    width:79%;
+    padding: 20px;
+
+}
+.box {
+     background: white;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      color: #4c1d95;
+      cursor: pointer;
+      box-shadow: 0 0 0px transparent;
+      transition: all 0.8s ease;
+    }
+    
+.box h2{
+    padding-bottom: 20px;
+}
+.box p{
+    text-align: justify;
+    padding-left: 10px;
+}
+.meta {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 14px;
+      padding-top:20px;
+      padding-left: 90px;
+    }
+
+    .meta span {
+      background: #da057098;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: #111827;
+      margin-bottom: 20px;
+      padding: 30px;
+      
+    }
+    .box:hover {
+      /* glow + upward move */
+      box-shadow: 0 0 20px rgb(226, 43, 43), 0 0 40px violet;
+      transform: translateY(-10px); /* move up */
+    }
+
+    .box:active {
+      /* click pannumbodhu down move */
+      transform: translateY(5px);
+      box-shadow: 0 0 10px rgb(226, 43, 83);
+    }
+   .container {
+  display: flex;
+  justify-content: center;   /* center all boxes horizontally */
+  gap: 30px;                 /* space between boxes */
+  margin-top: 50px;
+    margin-left:19%;
+}
+
+.box2 {
+  width: 250px;
+  border: 1px solid brown;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #4c1d95;
+  cursor: pointer;
+  box-shadow: 0 0 0px transparent;
+  transition: all 0.8s ease;
+  padding: 20px;
+
+}
+
+.box2:hover {
+  box-shadow: 0 0 20px rgb(252, 20, 194), 0 0 40px violet;
+  transform: translateY(-10px);
+}
+
+.syllabus h2 {
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+.syllabus a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.syllabus a:hover {
+  background: blueviolet;
+  transform: scale(1.05);
+}
+
+
+
+
+
+

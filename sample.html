@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Course Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .overview p {
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .meta {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    .meta span {
+      background: #f1f5f9;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: #111827;
+    }
+
+    .syllabus ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .syllabus li {
+      margin: 8px 0;
+    }
+
+    .syllabus a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .syllabus a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Box 1: Course Overview -->
+    <div class="box-overview">
+      <h2>📘 Course Overview</h2>
+      <p>
+        This course introduces the fundamentals of Web Development.
+        Students will learn HTML, CSS, and JavaScript with practical assignments
+        and a final mini project.
+      </p>
+
+      <div class="meta">
+        <span>Credits: 3</span>
+        <span>Level: Beginner</span>
+        <span>Semester: 1</span>
+        <span>Duration: 12 weeks</span>
+      </div>
+    </div>
+
+    <!-- Box 2: Syllabus -->
+    <div class="box syllabus">
+      <h2>📚 Syllabus</h2>
+      <ul>
+        <li><a href="#">View Syllabus Online</a></li>
+        <li><a href="#">Download PDF</a></li>
+        <li><a href="#">Week-wise Topics</a></li>
+        <li><a href="#">Assignments & Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
