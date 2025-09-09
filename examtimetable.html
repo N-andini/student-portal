@@ -1,64 +1,41 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Exam Timetable</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f6fb;
-      padding: 20px;
-    }
-    .exam-section {
-      width: 90%;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .exam-section h2 {
-      text-align: center;
-      color: #2563eb;
-      margin-bottom: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background: #2563eb;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background: #f9f9f9;
-    }
-    .download {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .download a {
-      background: #2563eb;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .download a:hover {
-      background: blueviolet;
-    }
-  </style>
-</head>
-<body>
-  
-  <!-- 1st Section - College Exam -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dasboard</title>
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="examtimetable.css">
+    </head>
+    <body>
+        <!-- header  -->
+         <!-- Top Bar -->
+        <div class="container1">
+        <div class="side-bar">
+            <h2></h2>
+            <div class="my-profile">
+                                <h4>Nandini</h4>
+
+                <img src="profile.jpg"alt="My Profile picture" class="profile">
+       <button onclick="button()" class="btn">Log-Out</button>           
+ </div>
+        </div>
+        </div>
+        <!-- Side Bar -->
+           <div class="menu">
+    <h1> Dashboard</h1>
+
+                 <a href="dashboard.html">📚Dashboard</a>
+                <a href="acsdemic.html">🗂️Academic Overview</a>
+                <a href="class shedule.html">📆Class Schedule</a>
+                <a href="notification.html">📥Notifications</a>
+                <a href="course.html">Course Material</a>
+                <!-- <a href="examtimetable.html">Exam Timetable</a>  -->
+                 <a href="contact.html">Contact Advisor</a>
+                <a href="#">Library Access</a>
+                <a href="#">Fee Payment</a>
+                <a href="#">Transcript Request</a>
+            </div>
+
+            <!-- 1st Section - College Exam -->
   <div class="exam-section">
     <h2>🏫 College Internal Exam Timetable</h2>
     <table>
@@ -91,7 +68,6 @@
       <a href="#">⬇ Download College Timetable (PDF)</a>
     </div>
   </div>
-
   <!-- 2nd Section - University Exam -->
   <div class="exam-section">
     <h2>🎓 University Main Exam Timetable</h2>
@@ -131,6 +107,12 @@
       <a href="#">⬇ Download University Timetable (PDF)</a>
     </div>
   </div>
+  <script>
+                function button(){
+alert("do you want logout");
+window.location.href="index.html"
+                }
+            </script>
 
-</body>
+    </body>
 </html>
