@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dasboard</title>
+        <link rel="stylesheet" href="dashboard.css">
+         <link rel="stylesheet" href="contact.css">
+
+
+    </head>
+    <body>
+        <!-- header  -->
+         <!-- Top Bar -->
+        <div class="container1">
+        <div class="side-bar">
+            <h2></h2>
+            <div class="my-profile">
+                                <h4>Nandini</h4>
+
+                <img src="profile.jpg"alt="My Profile picture" class="profile">
+       <button onclick="button()" class="btn">Log-Out</button>           
+ </div>
+        </div>
+        </div>
+        <!-- Side Bar -->
+           <div class="menu">
+    <h1> Dashboard</h1>
+    <a href="dashboard.html">Dashboard</a>
+                <a href="acsdemic.html">🗂️Academic Overview</a>
+                <a href="class shedule.html">📆Class Schedule</a>
+                <a href="notification.html">📥Notifications</a>
+                <a href="course.html">Course Material</a>
+                <a href="examtimetable.html">Exam Timetable</a>
+                 <!-- <a href="contact.html">Contact Advisor</a> -->
+                <a href="library.html">Library Access</a>
+                <a href="#">Fee Payment</a>
+                <a href="#">Transcript Request</a>
+            </div>
+
+            <body>
+  <div class="advisor-box">
+    <h2>📞 Contact Your Advisor</h2>
+
+    <div class="advisor-info">
+      <img src="advisor.jpg" alt="Advisor Photo">
+      <p><b>Name:</b> Dr. Ramesh Kumar</p>
+      <p><b>Department:</b> Computer Science</p>
+      <p><b>Email:</b> ramesh.kumar@college.edu</p>
+      <p><b>Phone:</b> +91 98765 43210</p>
+      <p><b>Office Hours:</b> Mon-Fri, 10 AM - 4 PM</p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <form>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="reg">Register Number</label>
+        <input type="text" id="reg" placeholder="Enter your register no">
+
+        <label for="msg">Message</label>
+        <textarea id="msg" rows="4" placeholder="Write your query here..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+    <script>
+                function button(){
+alert("do you want logout");
+window.location.href="index.html"
+                }
+            </script>
+</body>
+</html>
