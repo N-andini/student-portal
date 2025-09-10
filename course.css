@@ -20,6 +20,7 @@ body {
       cursor: pointer;
       box-shadow: 0 0 0px transparent;
       transition: all 0.8s ease;
+      padding: 50px;
     }
     
 .box h2{

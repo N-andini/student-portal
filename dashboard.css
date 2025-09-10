@@ -43,6 +43,11 @@
       border:none;
       border-radius:6px;  
       border:1px solid black;   
+      animation: pulse 0.8s infinite alternate;
+}
+@keyframes pulse {
+  from { transform: scale(1); box-shadow: 0 0 5px #ff00b3; }
+  to { transform: scale(1.1); box-shadow: 0 0 15px #ff00b3; }
 }
 .menu{
 width: 250px;
@@ -52,11 +57,13 @@ padding-top: 30px;
 padding-left:30px;
 align-items: center;
 position: fixed;
-box-shadow: 0 0 20px rgb(255, 0, 0);
-      cursor: pointer;
-      transition: all 8s;
-      animation:slideDown 0.8s ease;
-
+ animation: slideInLeft 1s ease forwards;
+  transform: translateY(-300px);
+}
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+  }
 }
 .menu h1{
     padding-bottom: 10px;
@@ -78,7 +85,7 @@ box-shadow: 0 0 20px rgb(255, 0, 0);
 }
 
 .menu a:hover{
-    color: rgba(202, 24, 24, 0.695);
+    color: white;
     background-color:rgba(137, 43, 226, 0.548) ;
     cursor: pointer;
     box-shadow: 0 0 20px #0d8eca;
@@ -104,6 +111,11 @@ box-shadow: 0 0 20px rgb(255, 0, 0);
     animation:bounceIn 1s ease;
   
 }
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
 
 .my-profile h4{
     padding-right: 10px;
@@ -118,8 +130,17 @@ box-shadow: 0 0 20px rgb(255, 0, 0);
     padding: 30px;
     border-radius: 15px;
     max-width: 700px;
-    margin: 20% auto;
+    margin: 20% 30%;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+     opacity: 0;
+  transform: scale(0.8);
+  animation: fadeZoom 1.2s ease forwards;
+}
+@keyframes fadeZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .welcome-profile img {
     width: 80px;
@@ -142,100 +163,37 @@ box-shadow: 0 0 20px rgb(255, 0, 0);
 h1{
     text-align: center;
 }
-/* content */
 
-.content1{
-    text-align: center;
-    margin-left: 17%;
-    margin-top: 35px;
-   
-   
-}
-.content2{
-    display: flex;
-    margin-right: 30px;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-}
-
-.card{
-     width: 30%;
-     height: 100px;
-     border: none;
-    border-radius: 30px;
-    background: #ff00b380;
-margin-left: 50px;
-    text-align: left;
-    padding: 10px 19px;
-    cursor: pointer;
- box-shadow: 0 0 10px 5px red;
- transition: all 0.8s;
-}
-
-.card p{
-    text-align: left;
-  padding-top: 12px;
-  padding-left: 20px;
-}
-.ticker{
-    width: 100%;
-    background:#ff00b380;
-    color: white;
-    position: fixed;
-      white-space:nowrap;
-  box-sizing:border-box;
-  padding:8px 0;
-    bottom: 0;
-    left: 0;
-
-}
-.ticker p{
-    display: inline-block;
-   padding-left:100%; /* start from right */
-   animation:scroll-left 20s linear infinite;
-  font-weight:600;
-  font-size:16px;
-}
-@keyframes scroll-left {
-  0%   { transform:translateX(0); }
-  100% { transform:translateX(-100%); }
-}
-.pages{
-    border: 1px solid black;
-    box-shadow: 0 0 30px red;
-    margin-top: 50px;
-    margin-left: 30%;
-    padding-top: 20px;
-    width: 60%;
-    height: 40%;
-}
-.pages1{
-   display: flex;
-   margin-top: 30px;
-
-}
-.card1{
-     border: none;
-   border-radius: 5px;
-   width: 30%;
-   background: #ff00b3;
-   margin-left: 20px;
-}
-.card1 h3{
-    padding-bottom: 20px;
-    padding-left: 16px;
-    padding-top: 20px;
-}
-.card1 p{
-    padding-left: 16px;
-    padding-bottom: 20px;
-}
-.card1 button{
-    border: none;
-    background: #c40e0e;
-    border-radius: 6px;
-    padding:10px 15px;
-    margin-left: 30px;
-}
-
+ /* Responsive */
+    @media (max-width: 768px) {
+      .menu {
+        width: 200px;
+      }
+      .welcome-profile {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    @media (max-width: 500px) {
+      .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .menu a {
+        width: auto;
+        margin: 5px;
+        font-size: 14px;
+      }
+      .welcome-profile {
+        margin: 80px 20px;
+      }
+      .content2 {
+        width: 95%;
+      }
+    }
 
     

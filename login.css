@@ -13,6 +13,7 @@ body {
 .container1 {
     border: 1px solid rgb(255, 255, 255);
     width: 64vh;
+    max-width: 90%;
     height: auto;
     text-align: center;
     padding: 40px 20px;
@@ -46,6 +47,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 15px 40px;
+    flex-wrap: wrap;
     font-size: 14px;
 }
 
@@ -101,14 +103,40 @@ button:hover {
     font-size: 13px;
     margin-top: 8px;
 }
-
-/* Responsive */
-@media screen and (max-width: 500px) {
+/* ✅ Responsive */
+@media screen and (max-width: 768px) {
     .container1 {
         width: 90%;
+        padding: 20px 15px;
     }
     .container2 input {
-        width: 100%;
         font-size: 14px;
+    }
+    .container4 button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container1 {
+        width: 95%;
+        padding: 15px 10px;
+    }
+     h1 {
+        font-size: 25px;
+    }
+    .container2 p {
+        font-size: 15px;
+    }
+    .container2 input {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .container4 button {
+        font-size: 16px;
+        height: 40px;
+    }
+    .container4 a {
+        font-size: 15px;
     }
 }
