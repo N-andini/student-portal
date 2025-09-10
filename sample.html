@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Fees Payment</title>
+  <title>Transcript Request</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -45,17 +45,13 @@
       margin-bottom: 15px;
     }
 
-    .info p {
-      margin: 8px 0;
-    }
-
     /* Form */
     form label {
       display: block;
       margin-top: 10px;
       font-weight: bold;
     }
-    form input, form select {
+    form input, form select, form textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -77,7 +73,7 @@
       background: blueviolet;
     }
 
-    /* Payment history */
+    /* Table */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -95,70 +91,67 @@
   </style>
 </head>
 <body>
-  <h1>💳 Fees Payment</h1>
+  <h1>📜 Transcript Request</h1>
 
   <div class="container">
 
-    <!-- Box 1: Info + Form -->
+    <!-- Box 1: Request Form -->
     <div class="box">
-      <h2>📌 Payment Details</h2>
-      <div class="info">
-        <p><b>Student Name:</b> Nandini Babu</p>
-        <p><b>Student ID:</b> ST12345</p>
-        <p><b>Course:</b> BCA - 5th Semester</p>
-        <p><b>Total Fees:</b> ₹25,000</p>
-        <p><b>Paid:</b> ₹10,000</p>
-        <p><b>Due:</b> ₹15,000</p>
-        <p><b>Last Date:</b> 25th September 2025</p>
-      </div>
-
+      <h2>📝 Request Form</h2>
       <form>
-        <label>Semester</label>
+        <label>Student Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Student ID</label>
+        <input type="text" placeholder="Enter your ID">
+
+        <label>Course & Department</label>
+        <input type="text" placeholder="Eg: BCA - Computer Science">
+
+        <label>Transcript Type</label>
         <select>
-          <option>1st Semester</option>
-          <option>2nd Semester</option>
-          <option>3rd Semester</option>
-          <option>4th Semester</option>
-          <option selected>5th Semester</option>
+          <option>Official</option>
+          <option>Unofficial</option>
         </select>
 
-        <label>Amount to Pay</label>
-        <input type="text" value="₹15,000">
+        <label>Number of Copies</label>
+        <input type="number" min="1" value="1">
 
-        <label>Payment Method</label>
+        <label>Delivery Option</label>
         <select>
-          <option>Debit / Credit Card</option>
-          <option>Net Banking</option>
-          <option>UPI / Wallet</option>
+          <option>Email</option>
+          <option>Post</option>
+          <option>Collect from Office</option>
         </select>
 
-        <button type="submit">Pay Now</button>
+        <label>Reason</label>
+        <textarea rows="3" placeholder="Eg: Higher Studies, Job, Personal Record"></textarea>
+
+        <button type="submit">Submit Request</button>
       </form>
     </div>
 
-    <!-- Box 2: Payment History -->
+    <!-- Box 2: Request History -->
     <div class="box">
-      <h2>📜 Payment History</h2>
+      <h2>📊 Request History</h2>
       <table>
         <tr>
           <th>Date</th>
-          <th>Amount</th>
+          <th>Type</th>
           <th>Status</th>
+          <th>Delivery</th>
         </tr>
         <tr>
-          <td>10 July 2025</td>
-          <td>₹5,000</td>
-          <td style="color:green;">Paid</td>
+          <td>01 Sep 2025</td>
+          <td>Official</td>
+          <td style="color:orange;">Processing</td>
+          <td>Email</td>
         </tr>
         <tr>
-          <td>20 August 2025</td>
-          <td>₹5,000</td>
-          <td style="color:green;">Paid</td>
-        </tr>
-        <tr>
-          <td>25 Sept 2025</td>
-          <td>₹15,000</td>
-          <td style="color:red;">Pending</td>
+          <td>15 Aug 2025</td>
+          <td>Unofficial</td>
+          <td style="color:green;">Completed</td>
+          <td>Collect</td>
         </tr>
       </table>
     </div>
