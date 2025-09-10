@@ -3,12 +3,12 @@ body {
       background: #f3f6fb;
     }
     .advisor-box {
-      width: 80%;
-      margin:4% 19%;
+      width: 75%;
+      margin:6% 21%;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(228, 18, 18, 0.2);
     }
     .advisor-box h2 {
       text-align: center;
@@ -58,4 +58,9 @@ body {
     }
     .contact-form button:hover {
       background: blueviolet;
+    }
+    .advisor-box:hover{
+      cursor: pointer;
+box-shadow: 0 0 12px rgba(89, 35, 238, 0.925);
+transition: all 0.8s;
     }
