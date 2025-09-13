@@ -4,45 +4,108 @@ body {
     }
     .exam-section {
       width: 75%;
-      margin: 70px 20%;
+      margin: 70px 21%;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeUp 1s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .exam-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
     }
     .exam-section h2 {
       text-align: center;
-      color: brown;
+      color: #2563eb;
+       animation: fadeIn 1.2s ease-in-out;
+        font-size: 22px;
       margin-bottom: 20px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
+      animation: fadeIn 1.5s ease-in-out;
     }
     th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
+       border: 1px solid #e5e7eb;
+      padding: 14px;
+  text-align: center;
+  font-size: 15px;
     }
     th {
-      background: #2563eb;
-      color: white;
+     background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
     }
     tr:nth-child(even) {
       background: #f9f9f9;
     }
+    /* Row hover effect */
+tr:hover {
+  background: #e0e7ff;
+  transition:  0.3s ease;
+}
     .download {
       margin-top: 20px;
       text-align: center;
     }
     .download a {
-      background: #2563eb;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
+       background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  padding: 12px 24px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .download a:hover {
-      background: blueviolet;
-    }
+.download a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exam-section {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  table, th, td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .exam-section h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  table, th, td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .download a {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

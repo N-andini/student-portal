@@ -2,37 +2,94 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+     background: #f8fafc;
 }
 .academic{
 margin-top: 90px;
+  animation: fadeDown 1s ease forwards;
 }
 .academic h1{
     margin-left: 30px;
+    text-align: center;
+  color: #a020f0;
+  text-shadow: 1px 1px 3px rgba(255, 0, 179, 0.3);
+  font-size: 28px
+}
+
+/* Responsive Fix */
+@media (max-width: 500px) {
+  .academic h1 {
+    font-size: 22px;
+    margin: 80%px auto;
+    text-align: center; /* ✅ ensures visible & centered */
+  }
 }
 .container{
     align-items: center;
-    border-radius: 30px;
-    border: 1px solid red;
+   border-radius: 20px;
+  border: 2px solid #ff00b3;
     margin-left: 38%;
     width:30%;
     margin-top: 50px;
+    background: rgb(248, 245, 245);
+  box-shadow: 0 4px 12px rgba(160, 32, 240, 0.2);
+  transition: all 0.6s ease;
+  opacity:3;
+  transform: translatey(40px);
+  animation: slideUp 1s ease forwards;
 }
 .container img{
     width: 30%;
-    border-radius: 50px;
+    border-radius: 60px;
     margin: 20px 30px;
+     border: 3px solid #ff00b3;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .container p{
     margin-left: 20px;
     padding-bottom: 12px;
+    font-size: 16px;
+  color: #333;
 }
 .container:hover{
-    cursor: pointer;
-    box-shadow: 0 0 10px red;
-    transition: all 0.8s;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ff66cc;
+  transform:scale(1.05);
 }
 .container img:hover{
-     cursor: pointer;
-    box-shadow: 0 0 10px black;
-    transition: all 0.8s;
+     /* cursor: pointer; */
+    transform: rotate(8deg) scale(1.1);
+  box-shadow: 0 0 15px #a020f0;
+}
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 698px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 56px;
+  }
+  .container p {
+    font-size: 14px;
+  }
 }
