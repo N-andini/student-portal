@@ -118,12 +118,12 @@
         <div class="grid">
           <div>
             <label for="fullname">Full Name <span aria-hidden="true">*</span></label>
-            <input id="fullname" name="fullname" type="text" placeholder="Example: Nandini B" required>
+           <input type="text" id="name"  placeholder="Example: Nandini B" required>
           </div>
 
           <div>
             <label for="roll">Roll / Register No <span aria-hidden="true">*</span></label>
-            <input id="roll" name="roll" type="text" placeholder="e.g. 12345" required>
+             <input type="text" id="roll"  placeholder="e.g. 12345" required>
           </div>
 
           <div>
@@ -225,10 +225,29 @@
           <div style="margin-left:auto;color:var(--muted);font-size:13px">Fields marked * are required</div>
         </div>
       </form>
+       <p>Already registered? <a href="index.html">Login here</a></p>
     </div>
-
-    
   </div>
+
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const roll = document.getElementById("roll").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // save to localStorage
+      localStorage.setItem("name", name);
+      localStorage.setItem("roll", roll);
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+
+      alert("Registered Successfully!");
+      window.location.href = "login.html";
+    });
+  </script>
 
 </body>
 </html>

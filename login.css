@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 60px;
     padding: 0;
     background-image: url("school.jpg");
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* center vertically */
+    /* height: 100vh; center vertically */
 }
 
 .container1 {
@@ -76,6 +76,12 @@ body {
     color: white;
     margin-top: 15px;
 }
+.error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
 
 button:hover {
    cursor: pointer;
@@ -103,40 +109,44 @@ button:hover {
     font-size: 13px;
     margin-top: 8px;
 }
-/* ✅ Responsive */
-@media screen and (max-width: 768px) {
-    .container1 {
-        width: 90%;
-        padding: 20px 15px;
+/* 🔹 Responsive for tablets & mobiles (max 768px) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;   /* stack items */
+        height: auto;            /* ✅ allow body to grow */
+        min-height: 100vh;       /* still cover screen if short */
+        padding: 20px;
     }
+
+    .container1 {
+        width: 100%;
+        padding: 20px;
+        margin: 20px;
+    }
+
     .container2 input {
+        width: 100%;
         font-size: 14px;
     }
-    .container4 button {
-        font-size: 16px;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .container1 {
-        width: 95%;
-        padding: 15px 10px;
-    }
-     h1 {
-        font-size: 25px;
-    }
     .container2 p {
-        font-size: 15px;
+        padding-left: 10px;
+        font-size: 14px;
     }
-    .container2 input {
-        font-size: 12px;
-        padding: 8px;
+
+    .container3 {
+        margin: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
+
     .container4 button {
         font-size: 16px;
         height: 40px;
     }
+
     .container4 a {
-        font-size: 15px;
+        font-size: 13px;
     }
 }

@@ -1,25 +1,87 @@
-.card {
-  width: 30%;
-  height: 100px;
-  border-radius: 30px;
-  background: #ff00b380;
-  margin-left: 50px;
-  text-align: left;
-  padding: 10px 19px;
-  cursor: pointer;
-  box-shadow: 0 0 10px 5px red;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-/* Animation effect */
-.card:hover {
-  transform: scale(1.05) rotate(-1deg);
-  box-shadow: 0 0 30px #ff0080;
-}
- background: linear-gradient(180deg, #ff00b3, #a020f0);
-  animation: slideInLeft 1s ease forwards;
-  transform: translateX(-300px);
-  box-shadow: 0 0 15px rgba(160, 32, 240, 0.4);
+    .login-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 320px;
+    }
 
-   background: #ff00b3;
-  border: 1px solid #a020f0;
+    h2 { color: #333; margin-bottom: 20px; }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button:hover { background: #4c51bf; }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Student Login</h2>
+    <input type="text" id="userid" placeholder="Enter ID / Email">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+    <p id="error-msg" class="error">❌ Invalid ID or Password</p>
+  </div>
+
+  <script>
+    // ✅ Fixed values
+    const correctID = "student123";   // இதை உங்களுக்கு தேவையான ID-ஆ மாற்றிக்கொள்ளலாம்
+    const correctPassword = "12345";  // இதை உங்களுக்கு தேவையான password-ஆ மாற்றிக்கொள்ளலாம்
+
+    function login(){
+      let user = document.getElementById("userid").value.trim();
+      let pass = document.getElementById("password").value.trim();
+      let errorMsg = document.getElementById("error-msg");
+
+      if(user === correctID && pass === correctPassword){
+        alert("Login Successful 🎉");
+        window.location.href = "dashboard.html"; // redirect
+      } else {
+        errorMsg.style.display = "block"; // show error
+      }
+    }
+  </script>
+</body>
+</html>

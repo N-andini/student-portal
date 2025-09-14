@@ -13,8 +13,7 @@
         <br>
 
         <p>*Password*</p>
-        <input type="password" id="password" placeholder="Enter Password" required autocomplete="off">
-        <p  class="message" id="msg"> Please fill the form</p>
+        <input type="password" id="password" placeholder="Enter Password (Numbers Only)" required autocomplete="off">
         
             </div>
             <div class="container3">
@@ -23,27 +22,31 @@
             </div>
             <div class="container4">
                 <button  onclick="login()">Login</button><br>
+                 <p id="error-msg" class="error">❌ Invalid ID or Password</p>
                 <a href="register.html"> register</a>
             </div>
 
         </div>
-        <script>
-            function login(){
-                let user=document.getElementById("username").value.trim();
-                let pass=document.getElementById("password").value.trim();
-                let msg=document.getElementById("msg");
-                if(user===""|| pass===""){
-                    msg.style.display="block";
+        
+        
+           <script>
+        // ✅ Fixed values
+          const allowedID = "NAN123";                // Student ID
+        const allowedEmail = "nandini@gmail.com";  // Email
+        const correctPassword = "12345";           // Password      // Change to your password
 
-                }
-                else{
-                    msg.style.display="none";
-                    alert("Login Successful");
-                    window.location.href="dashboard.html";
-                }
+        function login(){
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+            let errorMsg = document.getElementById("error-msg");
 
+            if((user === allowedID || user === allowedEmail) && pass === correctPassword){
+                window.location.href = "dashboard.html"; // redirect
+            } else {
+                errorMsg.style.display = "block"; // show error
             }
-        </script>
+        }
+    </script>
         
     </body>
 

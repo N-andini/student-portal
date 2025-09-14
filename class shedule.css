@@ -49,6 +49,7 @@ body{
     transform: scale(1.01);
     transition: all 0.3s ease;
 }
+tr.today{background:#dbeafe;font-weight:bold}
 
 /* Responsive text */
 @media (max-width: 768px) {
