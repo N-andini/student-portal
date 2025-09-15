@@ -3,6 +3,7 @@
     <head>
         <title>student login</title>
         <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="container1">
@@ -14,7 +15,7 @@
 
         <p>*Password*</p>
         <input type="password" id="password" placeholder="Enter Password (Numbers Only)" required autocomplete="off">
-        
+        <i class="fa fa-eye-slash" id="togglePassword"></i>
             </div>
             <div class="container3">
                 <h3>Remember me</h3>
@@ -46,7 +47,25 @@
                 errorMsg.style.display = "block"; // show error
             }
         }
+    
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+
+    togglePassword.addEventListener("click", function () {
+        // input type password ↔ text
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye"); // icon change
+        } else {
+            passwordInput.type = "password";
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+        }
+    });
+
     </script>
+
         
     </body>
 

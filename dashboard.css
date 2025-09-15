@@ -173,36 +173,70 @@ h1{
     text-align: center;
 }
 
- /* Responsive */
-    @media (max-width: 768px) {
-      .menu {
-        width: 200px;
-      }
-      .welcome-profile {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-    @media (max-width: 500px) {
-      .menu {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .menu a {
-        width: auto;
-        margin: 5px;
-        font-size: 14px;
-      }
-      .welcome-profile {
-        margin: 80px 20px;
-      }
-      .content2 {
-        width: 95%;
-      }
-    }
 
+@media (max-width: 768px) {
+  /* Sidebar becomes top menu */
+  .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translateX(0);
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .menu a {
+    width: 45%; /* fit 2 per row */
+    margin: 8px;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Top bar adjustments */
+  .side-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+  .my-profile {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .profile {
+    margin: 10px 0;
+  }
+
+  /* Welcome box full width */
+  .welcome-profile {
+    flex-direction: column;
+    text-align: center;
+    margin: 120px auto 20px auto; /* space below navbar */
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .welcome-profile img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .welcome-profile .text-content h1 {
+    font-size: 22px;
+  }
+  .welcome-profile .text-content p {
+    font-size: 14px;
+  }
+}
     
